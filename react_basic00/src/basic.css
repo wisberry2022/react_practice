@@ -1,7 +1,27 @@
-section {
-  font-size: 100px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.on {
+.TopBanner {
+  padding: 0;
+  background: #ddd;
+  overflow: hidden;
+  height: 100px;
+  transition: 0.5s;
+}
+
+.TopBanner.on {
+  height: 0;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 30px;
   color: #f00;
+}
+
+.btn.on {
+  transform: rotate(180deg);
 }

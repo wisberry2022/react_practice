@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Menu</title>
+  <style>
+    .contents>div {
+      display: none;
+    }
+
+    .content div.on {
+      display: block;
+    }
+  </style>
+</head>
+
+
+<body>
+  <div class="tabmenu">
+    <ul class="menu">
+      <li>MENU01</li>
+      <li>MENU02</li>
+      <li>MENU03</li>
+    </ul>
+    <div class="content">
+      <div class="on">content01</div>
+      <div>content02</div>
+      <div>content03</div>
+    </div>
+  </div>
+  <script>
+    document.querySelector('.menu li').forEach((el, idx) => {
+      el.addEventListener('click', (e) => {
+        const TG = e.target;
+        document.querySelectorAll('.menu li').forEach(el => el.classList.remove('on'))
+        el.classList.add('on');
+        const TAB = document.querySelectorAll('.content>div');
+        TAB.forEach(x => x.classList.remove('on'));
+        TAB[idx].classList.add('on');
+      })
+    })
+  </script>
+
+</body>
+
+</html>

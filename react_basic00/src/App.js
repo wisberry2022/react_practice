@@ -9,7 +9,9 @@ const App = () => {
 
   return (
     <>
-      <SlickCustom />
+      <section className="MainSection">
+        <SlickCustom />
+      </section>
     </>
   )
 }

@@ -5,6 +5,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
 }
 
 body {
@@ -12,12 +25,147 @@ body {
   line-height: 1;
 }
 
-.MainVisual {}
+.MainSection {
+  position: relative;
+}
 
 .MainVisual figure {
+  position: relative;
   height: 600px;
 }
 
-/* .MainVisual .itm01 {
+.MainVisual .itm01 {
   background: url('../public/assets/mainvisual01.jpg') no-repeat center center/cover;
-} */
+}
+
+.MainVisual .itm02 {
+  background: url('../public/assets/mainvisual02.jpg') no-repeat center center/cover;
+}
+
+.MainVisual .itm03 {
+  background: url('../public/assets/mainvisual03.jpg') no-repeat center center/cover;
+}
+
+.MainVisual .itm04 {
+  background: url('../public/assets/mainvisual01.jpg') no-repeat center center/cover;
+}
+
+.MainVisual .slogan {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1200px;
+  color: #fff;
+  text-shadow: 0 0 2px #000;
+}
+
+.MainVisual figure h2 {
+  margin: 0 0 15px 0;
+  font-size: 60px;
+  font-weight: 900;
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+.MainVisual figure.on h2 {
+  transform: translateY(0);
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.MainVisual figure p {
+  margin: 0 0 15px 0;
+  font-size: 15px;
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+.MainVisual figure.on p {
+  transform: translateY(0);
+  opacity: 1;
+  transition: 0.5s 0.5s;
+}
+
+
+.MainVisual figure a {
+  display: inline-block;
+  padding: 5px 20px 5px 20px;
+  background: #333;
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+.MainVisual figure.on a {
+  transform: translateY(0);
+  opacity: 1;
+  transition: 0.5s 1s;
+}
+
+.MainSection .slideArrow i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  font-size: 50px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.MainSection .slideArrow i:first-child {
+  margin-left: -800px;
+}
+
+.MainSection .slideArrow i:last-child {
+  margin-left: 800px;
+}
+
+.MainSection .slideDot {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  font-size: 0;
+}
+
+.MainSection .slideDot li {
+  position: relative;
+  display: inline-block;
+  margin: 0 2px;
+  border-radius: 3px;
+  width: 60px;
+  height: 5px;
+  background: #333;
+  overflow: hidden;
+}
+
+.MainSection .slideDot li::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background: #f00;
+}
+
+.MainSection .slideDot li.on::after {
+  width: 100%;
+  transition: 2s;
+}
+
+.MainSection .slideDot li.on {
+  background: #f00;
+}
+
+.MainSection .num {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-100%);
+  margin-left: 600px;
+  font-size: 30px;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0 0 3px #333;
+}

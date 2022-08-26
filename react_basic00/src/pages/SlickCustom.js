@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 
+
 const SlickCustom = () => {
   const fS = useRef();
   const [num, setNum] = useState();
@@ -12,6 +13,7 @@ const SlickCustom = () => {
 
   const Settings = {
     arrows: false,
+    autoplay: true,
     afterChange: idx => (
       setNum(idx)
     )
@@ -32,9 +34,12 @@ const SlickCustom = () => {
           SlideEle.map((itm, idx) => <figure
             key={itm.id}
             className={`itm0${idx + 1} ${idx == num ? 'on' : ''}`}
-            style={{ background: 'url("../public/assets/mainvisual01.jpg")' }}
           >
-            {itm.id}
+            <div className="slogan">
+              <h2>{itm.h2}</h2>
+              <p>{itm.p}</p>
+              <a href="#!">more</a>
+            </div>
           </figure>)
         }
       </Slider>

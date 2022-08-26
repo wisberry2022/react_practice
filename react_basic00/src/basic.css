@@ -12,24 +12,12 @@ body {
   line-height: 1;
 }
 
-.TopBanner {
-  padding: 0;
-  background: #ddd;
-  overflow: hidden;
-  height: 100px;
-  transition: 0.5s;
+.MainVisual {}
+
+.MainVisual figure {
+  height: 600px;
 }
 
-.TopBanner.on {
-  height: 0;
-}
-
-.btn {
-  display: inline-block;
-  font-size: 30px;
-  color: #f00;
-}
-
-.btn.on {
-  transform: rotate(180deg);
-}
+/* .MainVisual .itm01 {
+  background: url('../public/assets/mainvisual01.jpg') no-repeat center center/cover;
+} */

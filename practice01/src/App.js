@@ -57,8 +57,14 @@ function App() {
   }
 
   const deleteData = () => {
-    console.log('hello');
-  }
+    console.log(id_ref.current);
+    id_ref.current -= 1;
+    console.log(id_ref.current);
+    setUser(user.filter((it, idx) => (idx < id_ref.current - 1)));
+    console.log(user);
+  };
+
+
 
   return (
     <div className="App">
@@ -68,7 +74,6 @@ function App() {
       <input type="text" name="userContent" style={stylez} id="contents" onChange={(e) => (contentsValue(e))} />
       <button onClick={() => (addData())}>ADD</button>
       <button onClick={() => (deleteData())}>DELETE</button>
-      {console.log(data)}
       <ul className="user_list">
         {
           user.map((el, idx) => {

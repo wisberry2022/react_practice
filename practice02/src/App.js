@@ -43,16 +43,3 @@ const App = () => {
 }
 
 export default App;
-
-
-// const printWeatherInfo = (userKey) => {
-  //   fetch(`http://apis.data.go.kr/1360000/WthrWrnInfoService/getWthrInfo?serviceKey=${userKey}&numOfRows=10&pageNo=1&stnId=159&dataType=JSON&fromTmFc=20220915&toTmFc=20220917`)
-  //     .then(async (response) => {
-  //       let js = await response.json();
-  //       return js['response']['body']['items']['item'];
-  //     })
-  //     .then((data) => {
-
-  //     })
-
-  // }

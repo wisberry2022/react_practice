@@ -2,12 +2,16 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 function App() {
 
-  const key = 'KcPvvyVEaqORzpTkpeX8%2Bk36SeU1KPEAdUK7gVD%2BKt6hYBONhpq0ZQ8NcPEQR6O%2FuYEdi4c030PNJp5TL66XLw%3D%3D';
+  const key = '50aaa007-4790-4ac2-b113-2228b2aa393a';
 
-  axios.get(`/test`)
+  axios.get(`https://openapi.naver.com/v1/search/movie.json`, {
+    headers: {
+      "X-Naver-Client-Id": 'sp4_5CZOPaDaXu10QRQ_',
+      "X-Naver-Client-Secret": 'qTyZjcU3vX'
+    }
+  })
     .then((res) => {
       console.log(res);
-
     })
 
   return (

@@ -1,13 +1,14 @@
 import { useRef, useState } from "react";
+import { useDispatch } from "react-redux";
+import { SEARCH } from "./store/dataSlice";
 
 const Search = ({ data, setData }) => {
   const searchTarget = useRef();
-
+  const dispatch = useDispatch();
   const submitEvent = (e) => {
     const keyWord = searchTarget.current.value;
     e.preventDefault();
-    setData(data.filter(it => { return it.name === keyWord }));
-    // console.log(searchTarget.current.value);
+    dispatch(SEARCH(keyWord));
   }
 
   return (
@@ -26,7 +27,7 @@ const TableList = ({ listCnt, pageArr, setPage }) => {
     <ul className="list">
       {listNum.map((it, idx) => {
         return (
-          <li key={it} onClick={() => (setPage([0, 10].map(its => { return its + (it * 10) })))}>
+          <li key={it} onClick={() => (setPage([0, 10].map(its => { return it === 1 ? its : its + (it * 10) })))}>
             {it}
           </li>
         )
@@ -36,7 +37,6 @@ const TableList = ({ listCnt, pageArr, setPage }) => {
 }
 
 const Template = ({ data, listCnt, setData }) => {
-
   const theadList = ['영화인 코드', '이름', '주역할', '필모그래피'];
   const [pageArr, setPage] = useState([0, 10]);
 

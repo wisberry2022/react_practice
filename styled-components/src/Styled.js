@@ -1,35 +1,23 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-const StyledBox = styled.div`
-  border: 0.1rem solid #f00;
-  padding: 2rem;
+export const GreatDiv = styled.div`
+  position: relative;
+  height: 150vh;
+`;
+
+export const StickyDiv = styled.div`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: ${props => props.size || '50px'};
+  height: ${props => props.size || '50px'};
+  background-color: #000;
+  color: #fff;
+
+  ${(props) => props.size > 70 &&
+    css`
+    background-color: #f00;
+  `
+  }
 `
-export { StyledBox }
-
-const StyledH1 = styled.h1`
-  margin: ${props => props.align ? '0 auto' : '0'};
-  padding: .5rem;
-  text-align: center;
-  width: ${props => props.width};
-  color: ${props => props.color};
-  
-`;
-
-export { StyledH1 }
-
-const StyledStrong = styled.strong`
-  display: block;
-  text-align: center;
-  font-size: ${props => props.fontSize};
-`;
-
-export { StyledStrong }
-
-
-const StyledSpan = styled.span`
-  display: block;
-  font-size: 1.5rem;
-  color: ${props => props.color};
-`;
-
-export { StyledSpan };

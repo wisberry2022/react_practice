@@ -18,6 +18,5 @@ export const StickyDiv = styled.div`
   ${(props) => props.size > 70 &&
     css`
     background-color: #f00;
-  `
-  }
+  `}
 `

@@ -32,6 +32,30 @@ input {
   }
 }
 
-.btnBox {
-  // outline: 1px solid #000;
+.modifyBox {
+  span {
+    display: block;
+    margin-right: 2rem;
+    line-height: 2;
+  }
+
+  input[type="text"] {
+    outline: 0.1rem solid #999;
+    background-color: #fff;
+    padding: .5rem 1rem;
+
+    &[name="id"] {
+      width: 5rem;
+    }
+
+    &[name="title"] {
+      width: 15rem;
+    }
+
+    &[name="todo"] {
+      width: 20rem;
+    }
+  }
+
+
 }

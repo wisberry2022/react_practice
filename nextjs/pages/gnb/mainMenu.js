@@ -12,6 +12,7 @@ export default function mainMenu() {
         </ul>
       </nav>
       <a href="/gnb/mainMenu/custom">커스텀 상품</a>
+
     </div>
   )
 }

@@ -1,8 +1,7 @@
 import * as Styled from '../../styles/Styled';
 import Link from 'next/link';
-import '../commonCss/Basic.scss';
 
-export default function Gnb() {
+const Gnb = () => {
   return (
     <Styled.CustomDiv>
       <Styled.Navigation>
@@ -27,3 +26,5 @@ export default function Gnb() {
     </Styled.CustomDiv>
   )
 }
+
+export default Gnb;

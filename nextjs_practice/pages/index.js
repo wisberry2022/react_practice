@@ -1,11 +1,10 @@
-import Link from 'next/link';
-import Gnb from './layout/Gnb';
 import * as Styled from '../styles/Styled';
+import Total from './Main/Total';
 
 export default function Home() {
   return (
-    <Styled.CustomDiv>
-      <Gnb />
-    </Styled.CustomDiv>
+    <>
+      <Total />
+    </>
   )
 }

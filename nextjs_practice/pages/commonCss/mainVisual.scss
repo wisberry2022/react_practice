@@ -6,3 +6,10 @@
   position: absolute;
   top: 45%;
 }
+
+@media screen and (max-width: 768px) {
+  .absoluteBox {
+    position: static;
+    margin-top: 70%;
+  }
+}

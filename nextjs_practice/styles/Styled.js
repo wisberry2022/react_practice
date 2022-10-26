@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -38,6 +39,11 @@ export const defaultContainer = styled.div`
   gap: ${props => props.gap || '1.5rem'};
   margin: 0 auto;
   width: 1200px;
+  // width: 100%;
+
+  ${media.lessThan('medium')`
+    width: 100%;
+  `}
 `
 
 export const Navigation = styled.nav`
@@ -61,4 +67,29 @@ export const RowFlexUl = styled.ul`
       color: #fff;
     }
   }
+
+  ${media.lessThan('medium')`
+    // outline: 1px solid #fff;
+    position: fixed;
+    top: 100%;
+    right: -20rem;
+    z-index: 999;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: .5rem;
+    width: 60%;
+    height: 100vh;
+    background-color: #000;
+    transition: .5s;
+    
+    >li {
+      border-bottom: 0.1rem solid #222;
+      padding: .5rem 1.5rem;
+      line-height: auto;
+    }
+
+    &.show {
+      right: 0;
+    }
+  `}
 `;

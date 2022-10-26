@@ -48,7 +48,7 @@ export const Navigation = styled.nav`
   gap: 2.5rem;
   width: 100%;
   background-color: #111;
-  color: #fff;
+  color: #fff; 
 `
 
 export const RowFlexUl = styled.ul`

@@ -1,19 +1,30 @@
-import styled from 'styled-components';
+/** @jsxImportSource @emotion/react */
+import { jsx } from '@emotion/react';
+import styled from '@emotion/styled';
 import media from 'styled-media-query';
 
-export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
+export const Section = props => (
+  <section
+    css={
+      {
+        padding: '10rem 0',
+      }
+    }
+    {...props}
+  />
+)
 
-export const Section = styled.section`
-  padding: 10rem 0;
-`;
-
-export const ColFlexDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
+export const ColFlexDiv = props => (
+  <div
+    css={
+      {
+        display: 'flex',
+        flexDirection: 'column',
+      }
+    }
+    {...props}
+  />
+)
 
 export const TitleDiv = styled.div`
   display: ${props => props.display || 'block'};
@@ -41,21 +52,28 @@ export const defaultContainer = styled.div`
   width: 1200px;
   // width: 100%;
 
-  ${media.lessThan('medium')`
-    width: 100%;
-  `}
+    ${media.lessThan('medium')`
+      width: 100%;
+    `}
 `
 
-export const Navigation = styled.nav`
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 2.5rem;
-  width: 100%;
-  background-color: #111;
-  color: #fff; 
-`
+export const Navigation = props => (
+  <nav
+    css={
+      {
+        position: 'fixed',
+        left: '50%',
+        transform: 'translateX(-50%)',
+        display: 'flex',
+        gap: '2.5rem',
+        width: '100%',
+        backgroundColor: '#111',
+        color: '#fff'
+      }
+    }
+    {...props}
+  />
+)
 
 export const RowFlexUl = styled.ul`
   display: flex;
@@ -68,28 +86,27 @@ export const RowFlexUl = styled.ul`
     }
   }
 
-  ${media.lessThan('medium')`
-    // outline: 1px solid #fff;
-    position: fixed;
-    top: 100%;
-    right: -20rem;
-    z-index: 999;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: .5rem;
-    width: 60%;
-    height: 100vh;
-    background-color: #000;
-    transition: .5s;
+  // ${media.lessThan('medium')`
+  //   position: fixed;
+  //   top: 100%;
+  //   right: -20rem;
+  //   z-index: 999;
+  //   flex-direction: column;
+  //   justify-content: flex-start;
+  //   gap: .5rem;
+  //   width: 60%;
+  //   height: 100vh;
+  //   background-color: #000;
+  //   transition: .5s;
     
-    >li {
-      border-bottom: 0.1rem solid #222;
-      padding: .5rem 1.5rem;
-      line-height: auto;
-    }
+  //   >li {
+  //     border-bottom: 0.1rem solid #222;
+  //     padding: .5rem 1.5rem;
+  //     line-height: auto;
+  //   }
 
-    &.show {
-      right: 0;
-    }
-  `}
+  //   &.show {
+  //     right: 0;
+  //   }
+  // `}
 `;

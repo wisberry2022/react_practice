@@ -1,5 +1,5 @@
 {
-  "name": "nextjs_practice",
+  "name": "emotion",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,18 +11,12 @@
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
-    "facepaint": "^1.2.1",
-    "next": "12.3.1",
+    "next": "13.0.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-responsive": "^9.0.0",
-    "styled-components": "^5.3.6",
-    "styled-media-query": "^2.1.2"
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^2.0.7",
     "eslint": "8.26.0",
-    "eslint-config-next": "12.3.1",
-    "sass": "^1.55.0"
+    "eslint-config-next": "13.0.0"
   }
 }

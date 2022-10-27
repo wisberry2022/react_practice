@@ -2,8 +2,6 @@ import * as Styled from '../../styles/Styled';
 import { useMediaQuery } from 'react-responsive';
 
 const MainVisual = () => {
-
-
   return (
     <Styled.CustomDiv outline='0.1rem solid #000' height='100vh' className="bg_set mainBg">
       <Styled.defaultContainer>

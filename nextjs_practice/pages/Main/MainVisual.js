@@ -3,7 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 
 const MainVisual = () => {
   return (
-    <Styled.CustomDiv outline='0.1rem solid #000' height='100vh' className="bg_set mainBg">
+    <Styled.CustomDiv height='100vh' className="bg_set mainBg">
       <Styled.defaultContainer>
         <Styled.TitleDiv display='flex' flexDirection='column' justifyContent='center' color='#fff' className="absoluteBox">
           <h3>여러분과 함께하는 기업</h3>

@@ -1,0 +1,20 @@
+.companyName {
+  font-size: 1.6rem;
+}
+
+.btn {
+  position: relative;
+  border: none;
+  padding: 1.5rem 1rem;
+  background-color: transparent;
+  color: #fff;
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    cursor: pointer;
+  }
+}

@@ -2,6 +2,7 @@ import * as Styled from '../../styles/Styled';
 import Link from 'next/link';
 import { useMediaQuery } from 'react-responsive';
 import { useState } from 'react';
+import { CiAlignRight } from 'react-icons/ci';
 
 const Navigation = ({ propClass }) => {
   return (
@@ -38,7 +39,7 @@ const Gnb = () => {
             <h1 className="companyName">AAA Company</h1>}
           {isMobile ?
             <>
-              <button type="button" onClick={() => (setClick(prev => !prev))}>menu</button>
+              <button type="button" onClick={() => (setClick(prev => !prev))} className="btn"><CiAlignRight className="icon" /></button>
               <Navigation propClass={click ? "show" : " "} />
             </>
             :

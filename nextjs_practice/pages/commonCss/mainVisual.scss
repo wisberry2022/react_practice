@@ -4,12 +4,12 @@
 
 .absoluteBox {
   position: absolute;
-  top: 45%;
+  top: 50%;
 }
 
 @media screen and (max-width: 768px) {
   .absoluteBox {
     position: static;
-    margin-top: 70%;
+    transform: translateY(320%);
   }
 }

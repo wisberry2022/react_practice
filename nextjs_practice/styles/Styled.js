@@ -11,6 +11,9 @@ export const Section = props => (
     css={
       {
         padding: '5rem 0',
+        [mQ[0]]: {
+          padding: '5rem 0',
+        }
       }
     }
     {...props}
@@ -37,6 +40,10 @@ export const RowFlexBox = props => (
         gap: '1.5rem',
         width: '100%',
         flexWrap: 'wrap',
+        [mQ[0]]: {
+          justifyContent: 'center',
+          marginBottom: '2.5rem',
+        }
       }
     }
     {...props}
@@ -101,16 +108,22 @@ export const TitleDiv = styled.div`
   }
 
   ${mQ[0]} {
-    margin: 25rem 0 0 1rem;
+    margin: 0 0 1.5rem 1rem;
 
     h3 {
+      margin-bottom: 2rem;
+      font-size: 1.9rem;
       color: #f9f9f9;
-      text-shadow: 0.05rem 0.05rem 0.05rem #111;
+      ${props => props.textShadow ? 'text-shadow: 0.05rem 0.05rem 0.05rem #111' : ''}
+      text-align: ${props => props.textAlign ? 'center' : 'left'}
     }
 
     p {
+      font-size: 1.1rem;
       font-weight: 500;
-      text-shadow: 0.05rem 0.05rem 0.05rem #111;
+      ${props => props.textShadow ? 'text-shadow: 0.05rem 0.05rem 0.05rem #111' : ''}
+      line-height: 1.4;
+      text-align: ${props => props.textAlign ? 'center' : 'left'}
     }
   }
 `;

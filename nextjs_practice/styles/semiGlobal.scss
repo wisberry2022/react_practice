@@ -5,3 +5,19 @@
 .boxShadow {
   box-shadow: rgba(149, 157, 165, 0.2) 0 .2rem 1.1rem;
 }
+
+.companyName {
+  line-height: 4rem;
+}
+
+.more {
+  display: block;
+  // outline: .1rem solid #ddd;
+  margin: 0 auto;
+  border: none;
+  padding: .5rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #eee;
+  cursor: pointer;
+}

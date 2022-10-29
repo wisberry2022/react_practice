@@ -5,7 +5,7 @@ const MainVisual = () => {
   return (
     <Styled.CustomDiv height='100vh' className="bg_set mainBg">
       <Styled.defaultContainer>
-        <Styled.TitleDiv display='flex' flexDirection='column' justifyContent='center' color='#fff' className="absoluteBox">
+        <Styled.TitleDiv display='flex' flexDirection='column' justifyContent='center' color='#fff' textShadow={true} className="absoluteBox" >
           <h3>여러분과 함께하는 기업</h3>
           <p>
             항상 여러분들의 옆에서<br />

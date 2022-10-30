@@ -27,14 +27,14 @@ const Introduce = () => {
   return (
     <Emo.Section>
       <Emo.defaultContainer>
-        <Emo.TitleDiv textAlign='center' className="mobileDiv">
+        <Emo.TitleDiv textAlign='left' className="mobileDiv">
           <h3 style={{ color: '#111' }}>Technology For People</h3>
           <p>
             사람을 생각하는 기술<br />
             사람과 함께 나아가기 위해 혁신과 성장을 멈추지 않습니다
           </p>
         </Emo.TitleDiv>
-        <Emo.RowFlexBox>
+        <Emo.RowFlexBox flexwrap='wrap'>
           {isMobile ?
             introData.map(it => {
               return (

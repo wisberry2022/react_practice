@@ -4,8 +4,8 @@ import { useMediaQuery } from 'react-responsive';
 
 const ImageSet = ({ data }) => {
   return (
-    <Emo.CustomDiv width="100%" height="35rem" mobileWidth='100%' mobileHeight='19rem' className="feature">
-      <Emo.BgFigure width="100%" height="100%" mobileWidth='100%' mobileHeight='19rem' className={`bg_set bgItm0${data.id}`}></Emo.BgFigure>
+    <Emo.CustomDiv width="100%" height="35rem" mobilewidth='100%' mobileheight='19rem' className="feature">
+      <Emo.BgFigure width="100%" height="100%" mobilewidth='100%' mobileheight='19rem' className={`bg_set bgItm0${data.id}`}></Emo.BgFigure>
       <Emo.PositionDiv position='absolute' top='1rem' left='1rem' width='20rem' height='100%' padding='3rem 2rem' className="boxDeco">
         <h4>{data.title}</h4>
         <p>{data.contents}</p>
@@ -31,7 +31,7 @@ const Portfolio = () => {
           <Emo.ColFlexDiv gap='1.5rem'>
             {portfolioData.map(it => {
               return (
-                <ImageSet idx={it.id} data={it} />
+                <ImageSet key={it.id} data={it} />
               )
             })}
           </Emo.ColFlexDiv>
@@ -39,7 +39,7 @@ const Portfolio = () => {
           <Emo.RowFlexBox alignt='center' flexwrap='nowrap'>
             {portfolioData.map(it => {
               return (
-                <ImageSet idx={it.id} data={it} />
+                <ImageSet key={it.id} data={it} />
               )
             })}
           </Emo.RowFlexBox>

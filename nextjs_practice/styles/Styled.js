@@ -60,8 +60,8 @@ export const BgFigure = props => (
         height: props.height,
 
         [mQ[0]]: {
-          width: props.mobileWidth,
-          height: props.mobileHeight,
+          width: props.mobilewidth,
+          height: props.mobileheight,
         }
       }
     }
@@ -176,8 +176,8 @@ export const CustomDiv = styled.div`
   height: ${props => props.height || 'auto'};
 
   ${mQ[0]} {
-    width: ${props => props.mobileWidth};
-    height: ${props => props.mobileHeight};
+    width: ${props => props.mobilewidth};
+    height: ${props => props.mobileheight};
   }
 `;
 
@@ -192,6 +192,21 @@ export const defaultContainer = styled.div`
     width: 100%;
   }
 `
+
+export const ColFlexUl = styled.ul`
+  display: flex;
+  flex-direction: column;
+  justify-content: ${props => props.align || 'flex-start'};
+  gap: ${props => props.gap || '1.5rem'}
+  >li {
+    line-height: 4rem;
+    >a {
+      color: #fff;
+      font-size: 1rem;
+    }
+  }
+`
+
 
 export const RowFlexUl = styled.ul`
   display: flex;

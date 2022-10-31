@@ -5,6 +5,7 @@ import Introduce from './Sections/Introduce';
 import * as Styled from '../../styles/Styled';
 import Portfolio from './Sections/Portfolio';
 import Gnb from "../layout/Gnb";
+import SemiFooter from './Sections/Semifooter';
 
 const Total = () => {
   return (
@@ -13,6 +14,7 @@ const Total = () => {
       <MainVisual />
       <Introduce />
       <Portfolio />
+      <SemiFooter />
     </Styled.ColFlexDiv>
   )
 }

@@ -4,6 +4,7 @@ import './commonCss/gnb.scss';
 import '../styles/semiGlobal.scss';
 import '../styles/mediaQuery.scss';
 import '../styles/portfolio.scss';
+import '../styles/footer.scss';
 import { wrapper } from '../store/store';
 
 function MyApp({ Component, pageProps }) {

@@ -1,10 +1,12 @@
+/** @jsxImportSource @emotion/react */
+import { jsx, css } from '@emotion/react';
 import { useSelector } from 'react-redux';
 import * as Emo from '../../../styles/Styled';
 
 const InfoList = ({ footerData }) => {
   return (
-    <Emo.ColFlexDiv>
-      <h4>{footerData.title}</h4>
+    <Emo.ColFlexDiv gap="2.5rem">
+      <h4 className="footerTitle">{footerData.title}</h4>
       <Emo.ColFlexUl>
         {footerData.contents.map((it, idx) => {
           return (
@@ -28,7 +30,6 @@ const SemiFooter = () => {
               <InfoList key={it.id} footerData={it} />
             )
           })}
-          {/* <InfoList /> */}
         </Emo.RowFlexBox>
         <Emo.ColFlexDiv className="right">
           right2

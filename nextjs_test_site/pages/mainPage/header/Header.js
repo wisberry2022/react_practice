@@ -6,23 +6,23 @@ import MainVisual from './MainVisual';
 
 const Gnb = () => {
   const navData = [
-    {id:1, title:'회사소개', link: '/Intro'},
-    {id:2, title:'IR', link: '/IR'},
-    {id:3, title:'인재채용', link: '/Recruit'},
-    {id:4, title:'고객센터', link: '/CS'},
-    {id:5, title:'외주문의', link: '/Outsorce'},
+    { id: 1, title: '회사소개', link: '/Intro' },
+    { id: 2, title: 'IR', link: '/IR' },
+    { id: 3, title: '인재채용', link: '/Recruit' },
+    { id: 4, title: '고객센터', link: '/CS' },
+    { id: 5, title: '외주문의', link: '/Outsorce' },
   ]
   return (
     <nav className="gnb">
-      <Emo.DefaultContainer display='flex' justifyContent='space-between'>
-        <h1 className = "logo">
-          <Link href = "/">
+      <Emo.DefaultContainer display='flex' justifycontent='space-between'>
+        <h1 className="logo">
+          <Link href="/">
             ELM SOFT
           </Link>
         </h1>
         <Emo.RowFlexUl>
           {navData.map(it => {
-            return <li key = {it.id}><Link href={it.link}>{it.title}</Link></li>
+            return <li key={it.id}><Link href={it.link}>{it.title}</Link></li>
           })}
         </Emo.RowFlexUl>
       </Emo.DefaultContainer>

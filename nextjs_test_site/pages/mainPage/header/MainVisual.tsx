@@ -11,7 +11,7 @@ const MainVisual = () => {
   return (
     <div className="mainVisual bg_set">
       <Emo.DefaultContainer position='relative'>
-        <Emo.FloatingBox top='43rem' left='50%' transform='translate(-50%, -50%)'>
+        <Emo.FloatingBox top='48rem' left='50%' transform='translate(-50%, -50%)'>
           <div className="title_box">
             <h3>세상에 없는 소프트웨어를 개발합니다.</h3>
             <p>
@@ -20,7 +20,7 @@ const MainVisual = () => {
           </div>
           <Emo.BtnBox className="btnBox" justifycontent='center' gap='1.5rem'>
             {btnList.map(it => (
-              <Emo.BTN type="button" color={it.color} bgcolor={it.bgColor} className="btn">{it.title}</Emo.BTN>
+              <Emo.BTN type="button" key={it.id} color={it.color} bgcolor={it.bgColor} className="btn">{it.title}</Emo.BTN>
             ))}
           </Emo.BtnBox>
         </Emo.FloatingBox>

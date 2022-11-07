@@ -6,4 +6,13 @@ export interface simpleDataList {
   color?: string;
 }
 
-export interface styleBtn
+export interface BtnInterface {
+  width?: string;
+  height?: string;
+  bgcolor?: string;
+  color?: string;
+}
+
+export interface TitleBoxInterface {
+  textalign?: string;
+}

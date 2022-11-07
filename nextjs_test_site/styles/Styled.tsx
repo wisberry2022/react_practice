@@ -1,11 +1,20 @@
 /** @jsxImportSource @emotion/react */
 import { jsx, css } from '@emotion/react';
 import styled from '@emotion/styled';
+import { BtnInterface, TitleBoxInterface } from '../Interface/InterfaceSet';
+
+export const Section = props => (
+  <div
+    css={{
+      padding: '10rem 0',
+    }}
+    {...props}
+  />
+)
 
 export const DefaultContainer = props => (
   <div
     css={{
-      // outline: '0.1rem solid #000',
       position: props.position,
       display: props.display,
       justifyContent: props.justifycontent,
@@ -65,7 +74,22 @@ export const RowFlexUl = styled.ul`
     }
 `;
 
-export const BTN = styled.button`
+export const TitleBox = styled.div<TitleBoxInterface>`
+  margin-bottom: 2.5rem;
+  text-align: ${props => props.textalign};
+  h3 {
+    margin-bottom: 3rem;
+    font-size: 3.2rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 1.7rem;
+    font-weight: 400;
+  }
+`;
+
+export const BTN = styled.button<BtnInterface>`
     display: block;
     border-radius: 3rem;
     width: ${props => props.width ? props.width : '15rem'};

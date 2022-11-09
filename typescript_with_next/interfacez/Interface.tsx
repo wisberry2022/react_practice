@@ -1,5 +1,5 @@
 export interface listData {
-  id?: number;
+  id: number;
   title?: string | number;
   content?: string | Array<string>;
 }

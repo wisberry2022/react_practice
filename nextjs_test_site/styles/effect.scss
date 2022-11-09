@@ -1,0 +1,34 @@
+.effectSection {
+  background-color: #f9f9f9;
+
+  .container {
+    >* {
+      flex: 1;
+    }
+
+    .canvasArea {
+      margin-bottom: 5rem;
+      width: 100%;
+      height: 10rem;
+    }
+
+    .bottom {
+      .semiTitleBox {
+        text-align: center;
+
+        h4 {
+          margin-bottom: 1.5rem;
+          font-size: 2.3rem;
+        }
+
+        p {
+          font-size: 1.5rem;
+        }
+      }
+
+      .chartBox {
+        width: 120rem;
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { jsx, css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { BtnInterface, TitleBoxInterface } from '../Interface/InterfaceSet';
+import { BtnInterface, TitleBoxInterface, CssFormat } from '../Interface/InterfaceSet';
 
 export const Section = props => (
   <div
@@ -17,7 +17,9 @@ export const DefaultContainer = props => (
     css={{
       position: props.position,
       display: props.display,
+      flexDirection: props.flexdirect,
       justifyContent: props.justifycontent,
+      gap: props.gap,
       margin: '0 auto',
       width: '120rem',
     }}
@@ -53,6 +55,14 @@ export const BtnBox = props => (
   />
 )
 
+export const CustomFlexDiv = styled.div<CssFormat>`
+  display: flex;
+  flex-direction: ${props => props.flexdirection ? props.flexdirection : 'row'};
+  justify-content: ${props => props.justifycontent};
+  align-items: ${props => props.alignitems ? props.alignitems : 'flex-start'};
+  gap: ${props => props.gap};
+  flex-wrap: ${props => props.flexwrap ? props.flexwrap : 'nowrap'};
+`;
 
 export const RowFlexUl = styled.ul`
     display: flex;
@@ -75,7 +85,8 @@ export const RowFlexUl = styled.ul`
 `;
 
 export const TitleBox = styled.div<TitleBoxInterface>`
-  margin-bottom: 2.5rem;
+  // margin-bottom: 2.5rem;
+  margin-bottom:${props => props.marginbottom ? props.marginbottom : '2.5rem'};
   text-align: ${props => props.textalign};
   h3 {
     margin-bottom: 3rem;

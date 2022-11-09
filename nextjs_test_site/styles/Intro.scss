@@ -1,0 +1,27 @@
+.introSection {
+  .innerBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+
+    >.smallBox {
+      display: flex;
+      flex-direction: column;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      border-radius: 2rem;
+      padding: 2.5rem;
+      width: 35rem;
+
+      h4 {
+        margin-bottom: 6.5rem;
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+        line-height: 1.3;
+      }
+    }
+  }
+}

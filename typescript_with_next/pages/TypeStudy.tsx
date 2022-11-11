@@ -28,15 +28,15 @@ const TypeStudy = () => {
   const daysList: Array<string> = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'TRE'];
 
   // typescript로 이벤트 붙이기
-  // const daysFunc: (x: React.SyntheticEvent) => void =
-  //   (e: React.SyntheticEvent): void => {
-  //     setDay(e.target.innerText);
-  //   }
-
-  const daysFunc: (x: Event) => void =
-    (e: Event): void => {
+  const daysFunc: (x: React.BaseSyntheticEvent) => any =
+    (e: React.BaseSyntheticEvent) => {
       setDay(e.target.innerText);
     }
+
+  // const daysFunc: (x: Event) => void =
+  //   (e: Event): void => {
+  //     setDay(e.target.innerText);
+  //   }
 
   return (
     <div>

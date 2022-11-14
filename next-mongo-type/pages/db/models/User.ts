@@ -7,7 +7,3 @@ const TestSchema = new mongoose.Schema({
 })
 
 export default mongoose.models.User || mongoose.model('User', TestSchema, 'User');
-
-// const User = mongoose.model('User', TestSchema, 'User');
-
-// export default User || mongoose.models.User;

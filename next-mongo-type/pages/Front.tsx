@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useRef } from 'react';
 
 const Front = () => {
-  const data = useRef<HTMLInputElement>(null);
+  const data = useRef<null | HTMLInputElement>(null);
 
   const submitServer = (target: string): void => {
     console.log(target)

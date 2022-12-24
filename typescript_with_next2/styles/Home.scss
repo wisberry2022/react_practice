@@ -1,0 +1,87 @@
+.container {
+  .top {
+    border: .1rem solid #ddd;
+    padding: 5rem;
+
+    h1 {
+      margin-bottom: 4rem;
+      font-size: 3.5rem;
+      text-align: center;
+    }
+
+    .gnb {
+      >ul {
+        display: flex;
+        justify-content: center;
+        // gap: 4rem;
+
+        >li {
+          font-size: 1.5rem;
+          font-weight: 500;
+          // padding: 3rem;
+
+          >a {
+            display: block;
+            padding: 2rem 4rem;
+            background-color: #fff;
+            transition: .5s;
+
+            &:hover {
+              background-color: #000;
+              color: #fff;
+            }
+          }
+        }
+
+        >li.on a {
+          background-color: #000;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: center;
+    padding: 5rem 2.5rem;
+
+    .contents {
+      width: 120rem;
+
+      .topBox {
+        margin-bottom: 4rem;
+
+        h3 {
+          margin-bottom: 2.5rem;
+          font-size: 2.3rem;
+          font-weight: 600;
+        }
+
+        p {
+          font-size: 1.7rem;
+          text-align: left;
+        }
+      }
+
+      .bottomBox {
+        .imgBox {
+          display: flex;
+          justify-content: center;
+          gap: 3rem;
+
+          >figure {
+            width: 30rem;
+            height: 30rem;
+          }
+
+          @for $i from 1 through 4 {
+            .itm0#{$i} {
+              background-image: url('../public/assets/img/img0#{$i}.jpg');
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+// * {
+//   outline: 1px solid #000;
+// }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+
+    table {
+      border-spacing: 2rem;
+      border-radius: 3rem;
+      padding: 3rem;
+      background-color: #f9f9f9;
+
+      tbody {
+        tr {
+          td:first-child {
+            font-size: 1.3rem;
+            font-weight: 500;
+          }
+
+          td {
+            input {
+              outline: none;
+              border: none;
+              border-radius: 3rem;
+              padding: .5rem 2rem;
+              font-size: 2.5rem;
+              background-color: #d9d9d9;
+            }
+          }
+        }
+      }
+
+      tfoot {
+        td {
+          input {
+            border: none;
+            border-radius: 3rem;
+            padding: .5rem 0;
+            width: 25rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+          }
+        }
+      }
+
+
+    }
+  }
+
+
+}

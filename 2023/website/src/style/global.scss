@@ -1,0 +1,33 @@
+@import url('./font.scss');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 10px;
+
+  a {
+    display: block;
+    text-decoration: none;
+  }
+
+  ul,
+  li,
+  ol {
+    list-style-type: none;
+  }
+
+  h6,
+  h5,
+  h4,
+  h3,
+  h2,
+  h1 {
+    font-size: 1rem;
+    font-weight: 100;
+  }
+}
